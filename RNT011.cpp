@@ -3,11 +3,12 @@
 */
 
 #include <iostream>
+#include <string>
 #include <stack>
 using namespace std;
 
 /* function to check if brackets are balanced */
-bool areBracketsBalanced(string str)
+bool areBracketsBalanced(string expr)
 {
 	stack<char> str;
 	char x;
@@ -15,10 +16,10 @@ bool areBracketsBalanced(string str)
 	/* Traversing the Expression */
 	for (int i = 0; i < expr.length(); i++)
 	{
-		if (str[i] == '(' || str[i] == '[' || str[i] == '{')
+		if (expr[i] == '(' || expr[i] == '[' || expr[i] == '{')
 		{
 			/* Push the element in the stack */
-			str.push(str[i]);
+			str.push(expr[i]);
 			continue;
 		}
 
@@ -26,7 +27,7 @@ bool areBracketsBalanced(string str)
 		if (str.empty())
 			return false;
 
-		switch (str[i])
+		switch (expr[i])
 		{
 		case ')':
 
@@ -70,5 +71,6 @@ int main()
 
 	else
 		cout << "NO\n";
+		
 	return 0;
 }

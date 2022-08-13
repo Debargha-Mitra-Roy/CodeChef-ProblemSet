@@ -14,7 +14,7 @@ int main()
         int a, b, x, y;
         cin >> a >> b >> x >> y;
 
-        int require = (a * b);
+        int required = (a * b);
         int taken = (x * y);
 
         if (required <= taken)

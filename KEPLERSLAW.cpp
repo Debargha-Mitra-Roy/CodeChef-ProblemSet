@@ -44,7 +44,7 @@ int main()
         int t1, t2, r1, r2;
         cin >> t1 >> t2 >> r1 >> r2;
 
-        if (keplarslaw(t1, t2, r1, r2))
+        if (keplarsLaw(t1, t2, r1, r2))
             cout << "YES\n";
 
         else
